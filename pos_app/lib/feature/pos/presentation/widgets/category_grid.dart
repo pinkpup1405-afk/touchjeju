@@ -28,7 +28,7 @@ class CategoryGrid extends ConsumerWidget {
               crossAxisCount: 4,
               crossAxisSpacing: 6,
               mainAxisSpacing: 6,
-              childAspectRatio: 1.9,
+              childAspectRatio: 3.1,
             ),
             itemCount: categories.length,
             itemBuilder: (context, index) {

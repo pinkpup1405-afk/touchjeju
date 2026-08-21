@@ -10,7 +10,8 @@ void main() {
 
 /// 실제 매장 키오스크/폰 규격을 흉내내는 고정 크기 화면. 반응형으로 늘어나지 않고
 /// 브라우저 중앙에 고정 사이즈로만 표시한다.
-const _deviceSize = Size(414, 896);
+/// Figma 원본 디자인 프레임(1080x1920, 9:16)과 동일한 비율.
+const _deviceSize = Size(414, 736);
 
 class PosApp extends StatelessWidget {
   const PosApp({super.key});

@@ -15,12 +15,12 @@ class MainOrderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: PosColors.pageBackground,
       body: SafeArea(
         child: Column(
           children: [
             const _TopBar(),
-            const CategoryGrid(),
+            const ColoredBox(color: PosColors.chrome, child: CategoryGrid()),
             const ProductPageGrid(),
             const BottomOrderBar(),
           ],

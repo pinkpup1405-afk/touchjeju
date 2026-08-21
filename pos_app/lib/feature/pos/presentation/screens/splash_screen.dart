@@ -9,33 +9,14 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: const Color(0xFFC2D67F),
       body: GestureDetector(
         behavior: HitTestBehavior.opaque,
         onTap: () => Navigator.of(context).push(
           MaterialPageRoute(builder: (_) => const OrderTypeScreen()),
         ),
-        child: Stack(
-          fit: StackFit.expand,
-          children: [
-            Image.asset('assets/images/splash_poster.png', fit: BoxFit.cover),
-            Positioned(
-              left: 0,
-              right: 0,
-              bottom: 32,
-              child: const Center(
-                child: Text(
-                  '화면을 터치해 주세요',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    shadows: [Shadow(blurRadius: 8, color: Colors.black87)],
-                  ),
-                ),
-              ),
-            ),
-          ],
+        child: SizedBox.expand(
+          child: Image.asset('assets/images/splash_poster.png', fit: BoxFit.cover),
         ),
       ),
     );
